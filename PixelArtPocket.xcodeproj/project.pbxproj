@@ -13,6 +13,7 @@
 		9B877BB8206BCE8300C5E0DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B877BB6206BCE8300C5E0DA /* LaunchScreen.storyboard */; };
 		9B877BC3206BCE8300C5E0DA /* PixelArtPocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BC2206BCE8300C5E0DA /* PixelArtPocketTests.swift */; };
 		9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCD206BD42600C5E0DA /* IndexViewController.swift */; };
+		9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCF206E726100C5E0DA /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9B877BC2206BCE8300C5E0DA /* PixelArtPocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelArtPocketTests.swift; sourceTree = "<group>"; };
 		9B877BC4206BCE8300C5E0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B877BCD206BD42600C5E0DA /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		9B877BCF206E726100C5E0DA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				9B877BB6206BCE8300C5E0DA /* LaunchScreen.storyboard */,
 				9B877BB9206BCE8300C5E0DA /* Info.plist */,
 				9B877BCD206BD42600C5E0DA /* IndexViewController.swift */,
+				9B877BCF206E726100C5E0DA /* NavigationController.swift */,
 			);
 			path = PixelArtPocket;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */,
+				9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */,
 				9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
