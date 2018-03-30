@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BAD206BCE8300C5E0DA /* AppDelegate.swift */; };
-		9B877BB0206BCE8300C5E0DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BAF206BCE8300C5E0DA /* ViewController.swift */; };
 		9B877BB3206BCE8300C5E0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B877BB1206BCE8300C5E0DA /* Main.storyboard */; };
 		9B877BB5206BCE8300C5E0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B877BB4206BCE8300C5E0DA /* Assets.xcassets */; };
 		9B877BB8206BCE8300C5E0DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B877BB6206BCE8300C5E0DA /* LaunchScreen.storyboard */; };
 		9B877BC3206BCE8300C5E0DA /* PixelArtPocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BC2206BCE8300C5E0DA /* PixelArtPocketTests.swift */; };
+		9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCD206BD42600C5E0DA /* IndexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		9B877BAA206BCE8300C5E0DA /* PixelArtPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelArtPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B877BAD206BCE8300C5E0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B877BAF206BCE8300C5E0DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B877BB2206BCE8300C5E0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B877BB4206BCE8300C5E0DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B877BB7206BCE8300C5E0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		9B877BBE206BCE8300C5E0DA /* PixelArtPocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelArtPocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B877BC2206BCE8300C5E0DA /* PixelArtPocketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelArtPocketTests.swift; sourceTree = "<group>"; };
 		9B877BC4206BCE8300C5E0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B877BCD206BD42600C5E0DA /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				9B877BAD206BCE8300C5E0DA /* AppDelegate.swift */,
-				9B877BAF206BCE8300C5E0DA /* ViewController.swift */,
 				9B877BB1206BCE8300C5E0DA /* Main.storyboard */,
 				9B877BB4206BCE8300C5E0DA /* Assets.xcassets */,
 				9B877BB6206BCE8300C5E0DA /* LaunchScreen.storyboard */,
 				9B877BB9206BCE8300C5E0DA /* Info.plist */,
+				9B877BCD206BD42600C5E0DA /* IndexViewController.swift */,
 			);
 			path = PixelArtPocket;
 			sourceTree = "<group>";
@@ -199,8 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B877BB0206BCE8300C5E0DA /* ViewController.swift in Sources */,
 				9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */,
+				9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
