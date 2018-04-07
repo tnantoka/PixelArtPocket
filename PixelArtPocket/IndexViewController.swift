@@ -37,4 +37,8 @@ class IndexViewController: UITableViewController {
 
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "edit", sender: nil)
+    }
 }

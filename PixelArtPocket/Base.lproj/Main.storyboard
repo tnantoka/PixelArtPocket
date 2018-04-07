@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XST-xz-qQm" kind="show" identifier="edit" id="Nxx-VR-LUf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,6 +41,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZc-ks-Ky3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="930" y="151"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="WUE-Ac-pef">
+            <objects>
+                <viewController id="XST-xz-qQm" customClass="EditViewController" customModule="PixelArtPocket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0x-Lt-Bqu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvN-lI-aKm">
+                                <rect key="frame" x="37" y="183.5" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5Fn-HD-VGv"/>
+                                    <constraint firstAttribute="height" constant="300" id="Crg-fp-GrC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CvN-lI-aKm" firstAttribute="centerY" secondItem="r0x-Lt-Bqu" secondAttribute="centerY" id="IP6-sM-HY7"/>
+                            <constraint firstItem="CvN-lI-aKm" firstAttribute="centerX" secondItem="r0x-Lt-Bqu" secondAttribute="centerX" id="gKo-PG-rX1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gC8-L4-EhM"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GJI-G0-bdh"/>
+                        <barButtonItem title="Color" id="225-3O-Mng"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="kfS-C6-1zB"/>
+                        <barButtonItem title="Undo" id="ovg-Y8-CCs"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JJv-FK-dj5"/>
+                        <barButtonItem title="Redo" id="0U7-h6-X70"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ty0-US-DHy"/>
+                        <barButtonItem title="Grid" id="h2x-h6-Zh9"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="gNZ-jh-BAW"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EjX-rb-MEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3vw-I0-bG0">
