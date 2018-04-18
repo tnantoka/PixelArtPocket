@@ -74,10 +74,17 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JJv-FK-dj5"/>
                         <barButtonItem title="Redo" id="0U7-h6-X70"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ty0-US-DHy"/>
-                        <barButtonItem title="Grid" id="h2x-h6-Zh9"/>
+                        <barButtonItem title="Grid" id="h2x-h6-Zh9">
+                            <connections>
+                                <action selector="onTapGrid:" destination="XST-xz-qQm" id="FkY-CG-jy7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="gNZ-jh-BAW"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="editorView" destination="CvN-lI-aKm" id="MdG-72-ECd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjX-rb-MEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

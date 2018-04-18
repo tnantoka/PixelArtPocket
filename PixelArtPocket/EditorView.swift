@@ -18,6 +18,12 @@ class EditorView: UIView {
 
     var dots = Array(repeating: UIColor.clear, count: Int(dotsPerRow * dotsPerRow))
 
+    var isGrid = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
     override func draw(_ rect: CGRect) {
         for (i, dotColor) in dots.enumerated() {
             guard dotColor != .clear else { continue }
@@ -32,6 +38,23 @@ class EditorView: UIView {
 
             dotColor.setFill()
             path.fill()
+        }
+
+        if isGrid {
+            for i in 1..<Int(EditorView.dotsPerRow) {
+                let step = dotLength * CGFloat(i)
+
+                let path = UIBezierPath()
+
+                path.move(to: CGPoint(x: step, y: 0.0))
+                path.addLine(to: CGPoint(x: step, y: rect.maxY))
+
+                path.move(to: CGPoint(x: 0.0, y: step))
+                path.addLine(to: CGPoint(x: rect.maxX, y: step))
+
+                UIColor.lightGray.setStroke()
+                path.stroke()
+            }
         }
     }
 

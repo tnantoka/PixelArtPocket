@@ -10,6 +10,8 @@ import UIKit
 
 class EditViewController: UIViewController {
 
+    @IBOutlet weak var editorView: EditorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +34,7 @@ class EditViewController: UIViewController {
     }
     */
 
+    @IBAction func onTapGrid(_ sender: Any) {
+        editorView.isGrid = !editorView.isGrid
+    }
 }
