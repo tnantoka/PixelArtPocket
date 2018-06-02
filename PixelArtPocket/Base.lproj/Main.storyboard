@@ -68,7 +68,13 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="GJI-G0-bdh"/>
-                        <barButtonItem title="Color" id="225-3O-Mng"/>
+                        <barButtonItem title="Color" id="225-3O-Mng">
+                            <connections>
+                                <segue destination="b92-0G-syM" kind="popoverPresentation" popoverAnchorBarButtonItem="225-3O-Mng" id="lYX-Gs-6DZ">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="kfS-C6-1zB"/>
                         <barButtonItem title="Undo" id="ovg-Y8-CCs"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="JJv-FK-dj5"/>
@@ -89,6 +95,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjX-rb-MEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1705" y="151"/>
+        </scene>
+        <!--Color View Controller-->
+        <scene sceneID="jlf-Fq-WxY">
+            <objects>
+                <viewController id="b92-0G-syM" customClass="ColorViewController" customModule="PixelArtPocket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqv-0u-vNj" customClass="ColorPickerView" customModule="PixelArtPocket" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Vz7-dl-3Sv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2F-V3-Xgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3vw-I0-bG0">

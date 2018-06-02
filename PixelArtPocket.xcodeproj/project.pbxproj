@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0C736B20BFE16D00A16135 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C736A20BFE16D00A16135 /* ColorViewController.swift */; };
+		9B59670720C112060080D4EE /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B59670620C112060080D4EE /* ColorPickerView.swift */; };
 		9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BAD206BCE8300C5E0DA /* AppDelegate.swift */; };
 		9B877BB3206BCE8300C5E0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B877BB1206BCE8300C5E0DA /* Main.storyboard */; };
 		9B877BB5206BCE8300C5E0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B877BB4206BCE8300C5E0DA /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0C736A20BFE16D00A16135 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		9B59670620C112060080D4EE /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		9B877BAA206BCE8300C5E0DA /* PixelArtPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelArtPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B877BAD206BCE8300C5E0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B877BB2206BCE8300C5E0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				9B877BCF206E726100C5E0DA /* NavigationController.swift */,
 				9BF01D57207907E7009A6135 /* EditViewController.swift */,
 				9BF01D59207A4BE0009A6135 /* EditorView.swift */,
+				9B0C736A20BFE16D00A16135 /* ColorViewController.swift */,
+				9B59670620C112060080D4EE /* ColorPickerView.swift */,
 			);
 			path = PixelArtPocket;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 				9BF01D58207907E7009A6135 /* EditViewController.swift in Sources */,
 				9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */,
 				9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */,
+				9B59670720C112060080D4EE /* ColorPickerView.swift in Sources */,
 				9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */,
+				9B0C736B20BFE16D00A16135 /* ColorViewController.swift in Sources */,
 				9BF01D5A207A4BE0009A6135 /* EditorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

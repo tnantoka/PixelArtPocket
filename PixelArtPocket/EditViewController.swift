@@ -37,4 +37,17 @@ class EditViewController: UIViewController {
     @IBAction func onTapGrid(_ sender: Any) {
         editorView.isGrid = !editorView.isGrid
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let colorViewController = segue.destination as? ColorViewController {
+            colorViewController.delegate = self
+        }
+    }
+}
+
+extension EditViewController: ColorPickerDelegate {
+    func colorDidChange(color: UIColor) {
+        editorView.color = color
+        dismiss(animated: true, completion: nil)
+    }
 }

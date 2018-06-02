@@ -23,6 +23,7 @@ class EditorView: UIView {
             setNeedsDisplay()
         }
     }
+    var color = UIColor.black
 
     override func draw(_ rect: CGRect) {
         for (i, dotColor) in dots.enumerated() {
@@ -72,7 +73,7 @@ class EditorView: UIView {
 
         let x = Int(floor(location.x / dotLength))
         let y = Int(floor(location.y / dotLength))
-        dots[y * Int(EditorView.dotsPerRow) + x] = UIColor.black
+        dots[y * Int(EditorView.dotsPerRow) + x] = color
 
         setNeedsDisplay()
     }
