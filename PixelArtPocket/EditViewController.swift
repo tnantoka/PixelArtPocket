@@ -12,10 +12,17 @@ class EditViewController: UIViewController {
 
     @IBOutlet weak var editorView: EditorView!
     
+    @IBOutlet weak var undoItem: UIBarButtonItem!
+    @IBOutlet weak var redoItem: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        editorView.dotsDidChange = {
+            self.undoItem.isEnabled = self.editorView.canUndo
+            self.redoItem.isEnabled = self.editorView.canRedo
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +43,14 @@ class EditViewController: UIViewController {
 
     @IBAction func onTapGrid(_ sender: Any) {
         editorView.isGrid = !editorView.isGrid
+    }
+
+    @IBAction func onTapUndo(_ sender: Any) {
+        editorView.undo()
+    }
+
+    @IBAction func onTapRedo(_ sender: Any) {
+        editorView.redo()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

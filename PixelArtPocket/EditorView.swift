@@ -12,6 +12,14 @@ class EditorView: UIView {
 
     static let dotsPerRow: CGFloat = 32.0
 
+    let dotsUndoManager = UndoManager()
+    var canUndo: Bool {
+        return dotsUndoManager.canUndo
+    }
+    var canRedo: Bool {
+        return dotsUndoManager.canRedo
+    }
+
     var dotLength: CGFloat {
         return bounds.width / EditorView.dotsPerRow
     }
@@ -24,6 +32,8 @@ class EditorView: UIView {
         }
     }
     var color = UIColor.black
+    var dotsDidChange: () -> Void = {}
+
 
     override func draw(_ rect: CGRect) {
         for (i, dotColor) in dots.enumerated() {
@@ -73,8 +83,32 @@ class EditorView: UIView {
 
         let x = Int(floor(location.x / dotLength))
         let y = Int(floor(location.y / dotLength))
-        dots[y * Int(EditorView.dotsPerRow) + x] = color
+        let i = y * Int(EditorView.dotsPerRow) + x
+
+        setColor(color, atIndex: i)
 
         setNeedsDisplay()
+        dotsDidChange()
+    }
+
+    func setColor(_ color: UIColor, atIndex index: Int) {
+        guard index < dots.count else { return }
+        let prevColor = dots[index]
+        if color != prevColor {
+            dots[index] = color
+            dotsUndoManager.registerUndo(withTarget: self) { $0.setColor(prevColor, atIndex: index) }
+        }
+    }
+
+    func undo() {
+        dotsUndoManager.undo()
+        setNeedsDisplay()
+        dotsDidChange()
+    }
+
+    func redo() {
+        dotsUndoManager.redo()
+        setNeedsDisplay()
+        dotsDidChange()
     }
 }
