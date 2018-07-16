@@ -11,6 +11,7 @@ import UIKit
 class EditorView: UIView {
 
     static let dotsPerRow: CGFloat = 32.0
+    static let defaultDots = Array(repeating: UIColor.clear, count: Int(dotsPerRow * dotsPerRow))
 
     let dotsUndoManager = UndoManager()
     var canUndo: Bool {
@@ -24,7 +25,7 @@ class EditorView: UIView {
         return bounds.width / EditorView.dotsPerRow
     }
 
-    var dots = Array(repeating: UIColor.clear, count: Int(dotsPerRow * dotsPerRow))
+    var dots = defaultDots
 
     var isGrid = false {
         didSet {
@@ -34,6 +35,20 @@ class EditorView: UIView {
     var color = UIColor.black
     var dotsDidChange: () -> Void = {}
 
+    var screenshot: UIImage? {
+        let size = bounds.size
+        let opaque = true
+        let scale: CGFloat = 0.0
+        UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
+
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+
+        layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
 
     override func draw(_ rect: CGRect) {
         for (i, dotColor) in dots.enumerated() {

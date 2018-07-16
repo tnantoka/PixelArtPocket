@@ -12,11 +12,7 @@ class IndexViewController: UITableViewController {
 
     let reuseIdentifier = "reuseIdentifier"
 
-    let items = [
-        "#1",
-        "#2",
-        "#3",
-    ]
+    var pictures = Picture.all
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +20,51 @@ class IndexViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reload()
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return pictures.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
-        cell.textLabel?.text = items[indexPath.row]
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+
+        let picture = pictures[indexPath.row]
+
+        cell.textLabel?.text = formatter.string(from: picture.createdAt)
+        cell.imageView?.image = picture.image
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "edit", sender: nil)
+        let picture = pictures[indexPath.row]
+        performSegue(withIdentifier: "edit", sender: picture)
+    }
+
+    @IBAction func onTapAdd(_ sender: Any) {
+        let picture = Picture(colors: EditorView.defaultDots)
+        picture.save()
+        reload()
+    }
+
+    func reload() {
+        pictures = Picture.all
+        tableView.reloadData()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let picture = sender as? Picture {
+            (segue.destination as? EditViewController)?.picture = picture
+        }
     }
 }

@@ -36,7 +36,13 @@
                             <outlet property="delegate" destination="Ng4-90-Uy9" id="F5B-ux-dsg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pixel Art Pocket" id="vij-h2-9NS"/>
+                    <navigationItem key="navigationItem" title="Pixel Art Pocket" id="vij-h2-9NS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1fE-Kf-GEb">
+                            <connections>
+                                <action selector="onTapAdd:" destination="Ng4-90-Uy9" id="Zck-0M-tAo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZc-ks-Ky3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

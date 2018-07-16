@@ -16,6 +16,7 @@
 		9B877BC3206BCE8300C5E0DA /* PixelArtPocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BC2206BCE8300C5E0DA /* PixelArtPocketTests.swift */; };
 		9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCD206BD42600C5E0DA /* IndexViewController.swift */; };
 		9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCF206E726100C5E0DA /* NavigationController.swift */; };
+		9BE4AABA20FA2BC700CF1944 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4AAB920FA2BC700CF1944 /* Picture.swift */; };
 		9BF01D58207907E7009A6135 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01D57207907E7009A6135 /* EditViewController.swift */; };
 		9BF01D5A207A4BE0009A6135 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01D59207A4BE0009A6135 /* EditorView.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		9B877BC4206BCE8300C5E0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B877BCD206BD42600C5E0DA /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		9B877BCF206E726100C5E0DA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		9BE4AAB920FA2BC700CF1944 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
 		9BF01D57207907E7009A6135 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		9BF01D59207A4BE0009A6135 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 				9BF01D59207A4BE0009A6135 /* EditorView.swift */,
 				9B0C736A20BFE16D00A16135 /* ColorViewController.swift */,
 				9B59670620C112060080D4EE /* ColorPickerView.swift */,
+				9BE4AAB920FA2BC700CF1944 /* Picture.swift */,
 			);
 			path = PixelArtPocket;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */,
 				9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */,
 				9B59670720C112060080D4EE /* ColorPickerView.swift in Sources */,
+				9BE4AABA20FA2BC700CF1944 /* Picture.swift in Sources */,
 				9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */,
 				9B0C736B20BFE16D00A16135 /* ColorViewController.swift in Sources */,
 				9BF01D5A207A4BE0009A6135 /* EditorView.swift in Sources */,

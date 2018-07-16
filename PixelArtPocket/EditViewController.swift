@@ -15,13 +15,21 @@ class EditViewController: UIViewController {
     @IBOutlet weak var undoItem: UIBarButtonItem!
     @IBOutlet weak var redoItem: UIBarButtonItem!
 
+    var picture: Picture?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        guard let picture = picture else { return }
+        editorView.dots = picture.colors
 
         // Do any additional setup after loading the view.
         editorView.dotsDidChange = {
             self.undoItem.isEnabled = self.editorView.canUndo
             self.redoItem.isEnabled = self.editorView.canRedo
+            self.picture?.colors = self.editorView.dots
+            self.picture?.image = self.editorView.screenshot
+            self.picture?.save()
         }
     }
 
