@@ -38,12 +38,19 @@ struct Picture: Codable {
         }
     }
 
-    func save() {
+    var path: URL {
         let filename = "\(createdAt.timeIntervalSince1970).json"
+        return Picture.docURL.appendingPathComponent(filename)
+    }
+
+    func save() {
         guard let data = try? JSONEncoder().encode(self) else { return }
         guard let json = String(data: data, encoding: .utf8) else { return }
-        let path = Picture.docURL.appendingPathComponent(filename)
         try? json.write(to: path, atomically: true, encoding: .utf8)
+    }
+
+    func destroy() {
+        try? FileManager.default.removeItem(at: path)
     }
 
     static let fileManager = FileManager.default

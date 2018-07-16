@@ -51,6 +51,15 @@ class IndexViewController: UITableViewController {
         performSegue(withIdentifier: "edit", sender: picture)
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let picture = pictures[indexPath.row]
+            picture.destroy()
+            reload()
+        }
+    }
+
+
     @IBAction func onTapAdd(_ sender: Any) {
         let picture = Picture(colors: EditorView.defaultDots)
         picture.save()
