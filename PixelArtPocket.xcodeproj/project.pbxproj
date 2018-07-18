@@ -17,6 +17,9 @@
 		9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCD206BD42600C5E0DA /* IndexViewController.swift */; };
 		9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B877BCF206E726100C5E0DA /* NavigationController.swift */; };
 		9BE4AABA20FA2BC700CF1944 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4AAB920FA2BC700CF1944 /* Picture.swift */; };
+		9BE4AABC20FCDF4300CF1944 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9BE4AABB20FCDF4300CF1944 /* Cartfile */; };
+		9BE4AABF20FCE6D100CF1944 /* AdFooter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE4AABE20FCE6D100CF1944 /* AdFooter.framework */; };
+		9BE4AAC520FCE8BA00CF1944 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4AAC420FCE8BA00CF1944 /* Credentials.swift */; };
 		9BF01D58207907E7009A6135 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01D57207907E7009A6135 /* EditViewController.swift */; };
 		9BF01D5A207A4BE0009A6135 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01D59207A4BE0009A6135 /* EditorView.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,9 @@
 		9B877BCD206BD42600C5E0DA /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
 		9B877BCF206E726100C5E0DA /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		9BE4AAB920FA2BC700CF1944 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		9BE4AABB20FCDF4300CF1944 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		9BE4AABE20FCE6D100CF1944 /* AdFooter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdFooter.framework; path = Carthage/Build/iOS/AdFooter.framework; sourceTree = "<group>"; };
+		9BE4AAC420FCE8BA00CF1944 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		9BF01D57207907E7009A6135 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		9BF01D59207A4BE0009A6135 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE4AABF20FCE6D100CF1944 /* AdFooter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +78,11 @@
 		9B877BA1206BCE8300C5E0DA = {
 			isa = PBXGroup;
 			children = (
+				9BE4AABB20FCDF4300CF1944 /* Cartfile */,
 				9B877BAC206BCE8300C5E0DA /* PixelArtPocket */,
 				9B877BC1206BCE8300C5E0DA /* PixelArtPocketTests */,
 				9B877BAB206BCE8300C5E0DA /* Products */,
+				9BE4AABD20FCE6D100CF1944 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +110,7 @@
 				9B0C736A20BFE16D00A16135 /* ColorViewController.swift */,
 				9B59670620C112060080D4EE /* ColorPickerView.swift */,
 				9BE4AAB920FA2BC700CF1944 /* Picture.swift */,
+				9BE4AAC420FCE8BA00CF1944 /* Credentials.swift */,
 			);
 			path = PixelArtPocket;
 			sourceTree = "<group>";
@@ -114,6 +124,14 @@
 			path = PixelArtPocketTests;
 			sourceTree = "<group>";
 		};
+		9BE4AABD20FCE6D100CF1944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BE4AABE20FCE6D100CF1944 /* AdFooter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +142,7 @@
 				9B877BA6206BCE8300C5E0DA /* Sources */,
 				9B877BA7206BCE8300C5E0DA /* Frameworks */,
 				9B877BA8206BCE8300C5E0DA /* Resources */,
+				9BE4AAC020FCE6E800CF1944 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -199,6 +218,7 @@
 			files = (
 				9B877BB8206BCE8300C5E0DA /* LaunchScreen.storyboard in Resources */,
 				9B877BB5206BCE8300C5E0DA /* Assets.xcassets in Resources */,
+				9BE4AABC20FCDF4300CF1944 /* Cartfile in Resources */,
 				9B877BB3206BCE8300C5E0DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +232,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9BE4AAC020FCE6E800CF1944 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AdFooter.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AdFooter.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B877BA6206BCE8300C5E0DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -220,6 +258,7 @@
 				9BF01D58207907E7009A6135 /* EditViewController.swift in Sources */,
 				9B877BAE206BCE8300C5E0DA /* AppDelegate.swift in Sources */,
 				9B877BD0206E726100C5E0DA /* NavigationController.swift in Sources */,
+				9BE4AAC520FCE8BA00CF1944 /* Credentials.swift in Sources */,
 				9B59670720C112060080D4EE /* ColorPickerView.swift in Sources */,
 				9BE4AABA20FA2BC700CF1944 /* Picture.swift in Sources */,
 				9B877BCE206BD42600C5E0DA /* IndexViewController.swift in Sources */,
@@ -378,6 +417,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PixelArtPocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.PixelArtPocket;
@@ -392,6 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PixelArtPocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tnantoka.PixelArtPocket;

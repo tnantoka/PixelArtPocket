@@ -8,6 +8,8 @@
 
 import UIKit
 
+import AdFooter
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -26,6 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIToolbar.appearance(whenContainedInInstancesOf: [NavigationController.self]).barTintColor = barTintColor
         UIToolbar.appearance(whenContainedInInstancesOf: [NavigationController.self]).tintColor = .white
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+
+        AdFooter.shared.adMobApplicationId = Credentials.adMobApplicationId
+        AdFooter.shared.adMobAdUnitId = Credentials.adMobAdUnitId
+        window?.rootViewController = AdFooter.shared.wrap(controller!)
+
+        window?.makeKeyAndVisible()
 
         return true
     }
