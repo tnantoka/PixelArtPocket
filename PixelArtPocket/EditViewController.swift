@@ -8,12 +8,16 @@
 
 import UIKit
 
+import SwiftIconFont
+
 class EditViewController: UIViewController {
 
     @IBOutlet weak var editorView: EditorView!
     
+    @IBOutlet weak var colorItem: UIBarButtonItem!
     @IBOutlet weak var undoItem: UIBarButtonItem!
     @IBOutlet weak var redoItem: UIBarButtonItem!
+    @IBOutlet weak var gridItem: UIBarButtonItem!
 
     var picture: Picture?
 
@@ -31,6 +35,12 @@ class EditViewController: UIViewController {
             self.picture?.image = self.editorView.screenshot
             self.picture?.save()
         }
+
+        colorItem.icon(from: .fontAwesome, code: "square", ofSize: 20)
+        colorItem.tintColor = .black
+        undoItem.icon(from: .fontAwesome, code: "undo", ofSize: 20)
+        redoItem.icon(from: .fontAwesome, code: "repeat", ofSize: 20)
+        gridItem.icon(from: .fontAwesome, code: "squareo", ofSize: 20)
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +81,7 @@ class EditViewController: UIViewController {
 extension EditViewController: ColorPickerDelegate {
     func colorDidChange(color: UIColor) {
         editorView.color = color
+        colorItem.tintColor = color
         dismiss(animated: true, completion: nil)
     }
 }

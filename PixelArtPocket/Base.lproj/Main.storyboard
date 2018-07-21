@@ -103,7 +103,9 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="colorItem" destination="225-3O-Mng" id="N34-FO-0QF"/>
                         <outlet property="editorView" destination="CvN-lI-aKm" id="MdG-72-ECd"/>
+                        <outlet property="gridItem" destination="h2x-h6-Zh9" id="5DU-Rm-K1j"/>
                         <outlet property="redoItem" destination="0U7-h6-X70" id="A7W-sR-Iuf"/>
                         <outlet property="undoItem" destination="ovg-Y8-CCs" id="qXE-b4-VN7"/>
                     </connections>

@@ -1,1 +1,4 @@
 github "tnantoka/AdFooter"
+#github "0x73/SwiftIconFont"
+github "tnantoka/SwiftIconFont" "fix-disabled-bar-button-item"
+

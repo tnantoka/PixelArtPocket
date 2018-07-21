@@ -20,6 +20,7 @@
 		9BE4AABC20FCDF4300CF1944 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 9BE4AABB20FCDF4300CF1944 /* Cartfile */; };
 		9BE4AABF20FCE6D100CF1944 /* AdFooter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE4AABE20FCE6D100CF1944 /* AdFooter.framework */; };
 		9BE4AAC520FCE8BA00CF1944 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE4AAC420FCE8BA00CF1944 /* Credentials.swift */; };
+		9BE4AAC921035E2300CF1944 /* SwiftIconFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE4AAC821035E2300CF1944 /* SwiftIconFont.framework */; };
 		9BF01D58207907E7009A6135 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01D57207907E7009A6135 /* EditViewController.swift */; };
 		9BF01D5A207A4BE0009A6135 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF01D59207A4BE0009A6135 /* EditorView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		9BE4AABB20FCDF4300CF1944 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		9BE4AABE20FCE6D100CF1944 /* AdFooter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdFooter.framework; path = Carthage/Build/iOS/AdFooter.framework; sourceTree = "<group>"; };
 		9BE4AAC420FCE8BA00CF1944 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		9BE4AAC821035E2300CF1944 /* SwiftIconFont.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIconFont.framework; path = Carthage/Build/iOS/SwiftIconFont.framework; sourceTree = "<group>"; };
 		9BF01D57207907E7009A6135 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		9BF01D59207A4BE0009A6135 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BE4AABF20FCE6D100CF1944 /* AdFooter.framework in Frameworks */,
+				9BE4AAC921035E2300CF1944 /* SwiftIconFont.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +130,7 @@
 		9BE4AABD20FCE6D100CF1944 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BE4AAC821035E2300CF1944 /* SwiftIconFont.framework */,
 				9BE4AABE20FCE6D100CF1944 /* AdFooter.framework */,
 			);
 			name = Frameworks;
@@ -240,9 +244,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/AdFooter.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftIconFont.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AdFooter.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftIconFont.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -36,6 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AdFooter.shared.adMobAdUnitId = Credentials.adMobAdUnitId
         window?.rootViewController = AdFooter.shared.wrap(controller!)
 
+        #if DEBUG
+        AdFooter.shared.hidden = true
+        #endif
+        
         window?.makeKeyAndVisible()
 
         return true
